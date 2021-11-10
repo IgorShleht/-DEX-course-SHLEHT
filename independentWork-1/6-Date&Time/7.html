@@ -1,0 +1,25 @@
+<!--
+Создайте функцию getSecondsToTomorrow(), возвращающую количество секунд до завтрашней даты.
+Например, если сейчас 23:00, то:
+getSecondsToTomorrow() == 3600
+P.S. Функция должна работать в любой день, т.е. в ней не должно быть конкретного значения сегодняшней даты.
+-->
+
+<html>
+<body>
+<script>
+function getSecondsToTomorrow() {
+  let date = new Date();
+  let hour = date.getHours();
+  let minutes = date.getMinutes();
+  let seconds = date.getSeconds();
+  let totalSecondsToday = (hour * 60 + minutes) * 60 + seconds;
+  const totalSeconds = 86400;
+
+  return totalSeconds - totalSecondsToday;
+  
+}
+alert(getSecondsToTomorrow())
+</script>
+</body>
+</html>

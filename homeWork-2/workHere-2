@@ -16,7 +16,7 @@ export const showPrice = (price, discount) => {
 
 export const findSuccess = (bankResponse) => {
   //TODO: Проверьте что в строке есть 'Success' без учёта регистра
-  return bankResponse === "Success" ? "Yes" : "No";
+  return bankResponse.toLowerCase().includes('success')  ? "Yes" : "No";
 };
 
 export const dateToString = (date) => {

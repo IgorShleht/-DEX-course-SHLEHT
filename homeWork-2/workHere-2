@@ -1,4 +1,3 @@
-import { forSorting } from "./App";
 
 export const sum = (f, s) => {
   //TODO: Должны складываться только строки и числа

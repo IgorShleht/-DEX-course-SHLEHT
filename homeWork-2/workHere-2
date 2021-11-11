@@ -7,7 +7,8 @@ export const sum = (f, s) => {
 };
 
 export const showPrice = (price, discount) => {
-  const discountedPrice = price - (price * discount) / 100;
+  const discountedPrice = new Intl.NumberFormat('ru-RU', { style: 'currency', currency: 'RUB' }).format
+  (price - (price * discount) / 100);
 
   //TODO: Привести цену к виду: 10.00 р.
   // округлять до копеек в сторону магазина

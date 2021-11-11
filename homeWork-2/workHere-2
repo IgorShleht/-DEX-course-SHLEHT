@@ -1,0 +1,37 @@
+import { forSorting } from "./App";
+
+export const sum = (f, s) => {
+  //TODO: Должны складываться только строки и числа
+  // Постарайтесь сложить как можно больше пар и обойти NaN случаи
+  return f + s;
+};
+
+export const showPrice = (price, discount) => {
+  const discountedPrice = price - (price * discount) / 100;
+
+  //TODO: Привести цену к виду: 10.00 р.
+  // округлять до копеек в сторону магазина
+  return discountedPrice;
+};
+
+export const findSuccess = (bankResponse) => {
+  //TODO: Проверьте что в строке есть 'Success' без учёта регистра
+  return bankResponse === "Success" ? "Yes" : "No";
+};
+
+export const dateToString = (date) => {
+  //TODO: Преобразовать дату к Вчера/Сегодня/Завтра или год:месяц:день
+  return date;
+};
+
+export const sort = (data) => {
+  //TODO: Отсортируйте массив строк по алфавиту
+  const sortArray = forSorting.sort(function (a, b) {
+    if (a.toLowerCase() < b.toLowerCase()) return -1;
+    if (a.toLowerCase() > b.toLowerCase()) return 1;
+    return 0;
+  });
+  const collatore = new Intl.Collator("ru-RU");
+  sortArray.sort(collatore.compare);
+  return data;
+};

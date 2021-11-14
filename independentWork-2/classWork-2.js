@@ -39,7 +39,7 @@ export const getDoubleUserBonuses = (data) => {
   return data.map((x) => (
     <div>
       Пользователь {x.name} получит соответственно{" "}
-      {Object.values(x.userBonuses).reduce((a, b) => a + b) * 2} бонусов{" "}
+      {Object.values(x.userBonuses).reduce((a, b) => a + b) * 2} бонусов
     </div>
   ));
 };

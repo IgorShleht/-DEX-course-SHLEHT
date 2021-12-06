@@ -8,11 +8,7 @@ interface IProjectCardProps {
 }
 
 //TODO: сделать компонент ProjectCardProps
-export const ProjectCardProps: React.FC<IProjectCardProps> = ({
-  project,
-  onClick,
-  id
-}) => {
+export const ProjectCardProps: React.FC<IProjectCardProps> = ({project, onClick, id}) => {
   return project.important ? (
     <div
       onClick={() => onClick(id)}

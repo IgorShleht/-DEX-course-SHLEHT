@@ -7,11 +7,7 @@ interface TodoCardProps {
 }
 
 //TODO: сделать компонент TodoCard
-export const TodoCard: React.FC<TodoCardProps> = ({
-  todo,
-  deleteCallback,
-  id
-}) => {
+export const TodoCard: React.FC<TodoCardProps> = ({todo, deleteCallback, id}) => {
   const handleDelete = () => {
     deleteCallback(id);
   };

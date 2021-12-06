@@ -8,10 +8,7 @@ interface ITodoListProps {
 }
 
 //TODO: сделать TodoList компонент
-export const TodoList: React.FC<ITodoListProps> = ({
-  todos,
-  deleteCallback
-}) => {
+export const TodoList: React.FC<ITodoListProps> = ({todos, deleteCallback}) => {
   return (
     <ul>
       <p>{todos.length ? "Список" : "Пусто"}</p>

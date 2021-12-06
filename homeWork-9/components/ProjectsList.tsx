@@ -9,10 +9,7 @@ interface IProjectsListProps {
 
 //TODO: Добавить компонент ProjectsList
 // важные подкрасить красным, неважные зелёным
-export const ProjectsList: React.FC<IProjectsListProps> = ({
-  projects,
-  onClick
-}) => {
+export const ProjectsList: React.FC<IProjectsListProps> = ({projects, onClick}) => {
   return (
     <div>
       {projects.map((item) => (
